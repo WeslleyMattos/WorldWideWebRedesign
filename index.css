@@ -10,6 +10,7 @@
   --highlighted-color: #cccccc;
   --title-color: #ffffff;
   --line-height: 10vw;
+  --nav-color: #ffffff;
 }
 
 /* Estilo padrão para todos os elementos */
@@ -37,6 +38,13 @@ header {
   width: 100%; /* Ocupa toda a largura disponível */
   border-radius: 15px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra sutil */
+  position: fixed;
+}
+
+#firstContent{
+  position:relative;
+  margin-top: 7%;
+  text-align: center;
 }
 
 nav {
@@ -48,6 +56,8 @@ nav {
   height: 8vh;
   padding: 0 16px; /* Adicionado espaçamento para o botão ficar afastado da borda */
 }
+
+
 
 #theme-toggle {
   background: transparent;
@@ -63,11 +73,17 @@ a {
   transition: 0.3s;
 }
 
+
+
 a:hover {
   opacity: 0.7;
 }
 
-.logo {
+.nav{
+  color: var(--nav-color);
+}
+
+#logo {
   font-size: 24px;
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -82,11 +98,16 @@ nav {
   height: 8vh;
 }
 
-main {
+#bigConteiner{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+/*main {
   background: url("img/bg.jpg") no-repeat center center fixed;
   background-size: cover;
   height: 92vh;
-}
+}*/
 
 .nav-list {
   list-style: none;
@@ -109,6 +130,10 @@ main {
   background: #fff;
   margin: 8px;
   transition: 0.3s;
+}
+
+.nav{
+  color: #fff;
 }
 
 @media (max-width: 999px) {
@@ -134,6 +159,9 @@ main {
   }
   .mobile-menu {
     display: block;
+  }
+  #bigConteiner{
+    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -170,7 +198,11 @@ main {
   text-align: center;
   background-color: var(--bg2-color);
   margin: 8px;
-  flex: 1; /* Ocupa o espaço disponível horizontalmente */
+   /* Ocupa o espaço disponível horizontalmente */
+}
+
+.lineIndex:hover{
+  border: 4px solid white;
 }
 
 /* Estilos para tamanhos de tela menores que 768px */
@@ -186,6 +218,12 @@ main {
 
   footer {
     padding: 8px;
+  }
+  #bigConteiner{
+    grid-template-columns: 1fr ;
+  }
+  #firstContent{
+    margin-top: 17%;
   }
 }
 
