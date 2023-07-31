@@ -1,177 +1,121 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <script src="chrome-extension://mooikfkahbdckldjjndioackbalphokd/assets/prompt.js"></script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="widivh=device-widivh, initial-scale=1.0">
-    <title>The World Wide Web project</title>
-    <style>
-    :root{
-        --cbc-color: #000000;
-        --bg-color: #252525;
-        --bg2-color: #101010;
-        --txt-color: #aaaaaa;
-        --highlighted-color: #cccccc;
-        --title-color: #ffffff;
-    }
-    #bigConteiner{
-        display:flex;
-        flex-direction:column;
-    }
-    #line1, #line2, #line3{
-        display:flex;
-        flex-direction:row;
-        flex:1;
-        
-    }
-    .lineIndex{
-        height: 100px;
-        border-radius: 8px;
-        flex:1;
-        text-align: center;
-        margin-left:2%;
-        margin-right:2%;
-        margin-top:2.5%;
-        background-color: var(--bg2-color);
-    }
-    header{
-        text-align: center;
-    }
-    #topHeader{
-        display: flex;
-        flex-direction: row; 
-    }
-    footer{
-      display: flex;
-      flex-direction: row;  
-      justify-content: space-between;
-    }
-    #credits1{
-        margin-left: 8px;
-        flex: 1;
-    }
-    #credits2{
-        margin-right: 8px;
-        flex: 1;
-        text-align: right;
-    }
-    body{
-        background-color: var(--bg-color);
-        display: flex;
-        flex-direction: column;
-        align-content: space-between;
-    }
-    header,footer{
-        background-color: var(--cbc-color);
-        margin-left: -8px;
-        margin-right: -8px;
-    }
-    header {
-       margin-top: -22px;
-    }
-    footer{
-        margin-top: 26px;
-    }
-    
-    h1{
-        color: var(--title-color);
-        flex:13;
-    }
-    button{
-        flex:1;
-    }
-    p{
-        color:var(--txt-color);
-    }
-    a{
-        color: var(--highlighted-color);
-    }
-   
-
-
-    </style>
-    <script>
-
-    let theme = "dark";
-
-        function onClick(){
-            if(theme == "dark"){
-                theme = "ligth";
-                setLightTheme();
-            }
-            else{
-                theme = "dark";
-                setDarkTheme();
-            }
-        }
-
-        function setDarkTheme(){
-            document.documentElement.style.setProperty('--cbc-color', '#000000');
-            document.documentElement.style.setProperty('--bg-color', '#252525');
-            document.documentElement.style.setProperty('--bg2-color', '#101010');
-            document.documentElement.style.setProperty('--txt-color', '#aaaaaa');
-            document.documentElement.style.setProperty('--highlighted-color', '#cccccc');
-            document.documentElement.style.setProperty('--title-color', '#ffffff');
-        }
-       
-        function setLightTheme(){
-            document.documentElement.style.setProperty('--cbc-color', '#c0c0c0');
-            document.documentElement.style.setProperty('--bg-color', '#dfdfdf');
-            document.documentElement.style.setProperty('--bg2-color', '#a0a0a0');
-            document.documentElement.style.setProperty('--txt-color', '#404040');
-            document.documentElement.style.setProperty('--highlighted-color', '#151515');
-            document.documentElement.style.setProperty('--title-color', '#000000');
-        }
-
-    </script>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>World Wide Web</title>
+  <link rel="stylesheet" href="index.css" />
 </head>
+
 <body>
-    <header>
-   <div id="topHeader"> <h1>World Wide Web</h1> <button onclick="onClick();">Change Theme</button> </div>
-    <p>The WorldWideWeb (W3) is a wide-area <a name="0" href="hypertext.html"> hypermedia</a> information retrieval initiative aiming to give universal access to a large universe of documents.</p>
-<p>
-    Everything there is online about W3 is linked directly or indirectly to this document, including an <a name="24" href="summary.html">executive summary</a> of the project, <a href="mailinglist.html">Mailing lists</a> , <a href="policy.html">Policy</a> , November's <a name="34" href="w3news.html">W3 news</a> , <a href="frequentlyasked.html">Frequently Asked Questions.</a>
-</p>
-    </header>
-    <main>
-    <div id="bigConteiner">
+  <header>
+    <nav>
+      <a class="logo" href="/">World Wide Web</a>
+      <div class="mobile-menu">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+      <ul class="nav-list">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">The History</a></li>
+        <li><a href="#">Help</a></li>
+      </ul>
+      <button id="theme-toggle">Change Theme</button>
+    </nav>
+  </header>
+  <main>
+    <div class="wrapper">
+      <header>
+        <div id="topHeader">
+          <h1>World Wide Web</h1>
+        </div>
+        <p>
+          The WorldWideWeb (W3) is a wide-area
+          <a name="0" href="hypertext.html"> hypermedia</a> information
+          retrieval initiative aiming to give universal access to a large
+          universe of documents.
+        </p>
+        <p>
+          Everything there is online about W3 is linked directly or indirectly
+          to this document, including an
+          <a name="24" href="summary.html">executive summary</a> of the project,
+          <a href="mailinglist.html">Mailing lists</a> ,
+          <a href="policy.html">Policy</a> , November's
+          <a name="34" href="w3news.html">W3 news</a> ,
+          <a href="frequentlyasked.html">Frequently Asked Questions.</a>
+        </p>
+      </header>
 
-    <div id="line1">
-        <div class="lineIndex">
+      <div id="bigConteiner">
+
+        <div id="line1">
+          <div class="lineIndex">
             <a href="whatsoutthere.html">What's out there?</a>
-            <p>Pointers to the world's online information, subjects ,W3 servers, etc.</p></div>
-        <div class="lineIndex">
+            <p>
+              Pointers to the world's online information, subjects ,W3
+              servers, etc.
+            </p>
+          </div>
+          <div class="lineIndex">
             <a href="help.html">Help</a>
-            <p>on the browser tou are using</p></div>
-        <div class="lineIndex"><a href="Software.html">Software Products</a>
-            <p>A list of W3 project components and their current state. (e.g. Line Mode ,X11 Viola , NeXTStep , Server , Tools , Mail robot, Library.)</p></div>
-    </div>
+            <p>on the browser tou are using</p>
+          </div>
+          <div class="lineIndex">
+            <a href="Software.html">Software Products</a>
+            <p>
+              A list of W3 project components and their current state. (e.g.
+              Line Mode ,X11 Viola , NeXTStep , Server , Tools , Mail robot,
+              Library.)
+            </p>
+          </div>
+        </div>
 
-    <div id="line2">
-            <div class="lineIndex"><a href="technical.html">Technical</a>
-            <p>Details of protocols, formats, program internals etc</p></div>
-        <div class="lineIndex"><a href="bibliography.html">Bibliography</a>
-            <p>Paper documentation on W3 and references.</p></div>
-        <div class="lineIndex"><a href="people.html">People</a>
-            <p>A list of some people involved in the project.</p></div>
+        <div id="line2">
+          <div class="lineIndex">
+            <a href="technical.html">Technical</a>
+            <p>Details of protocols, formats, program internals etc</p>
+          </div>
+          <div class="lineIndex">
+            <a href="bibliography.html">Bibliography</a>
+            <p>Paper documentation on W3 and references.</p>
+          </div>
+          <div class="lineIndex">
+            <a href="people.html">People</a>
+            <p>A list of some people involved in the project.</p>
+          </div>
+        </div>
+        <div id="line3">
+          <div class="lineIndex">
+            <a href="history.html">History</a>
+            <p>A summary of the history of the project.</p>
+          </div>
+          <div class="lineIndex">
+            <a href="how can I help.html">How can I help?</a>
+            <p>If you would like to support the web..</p>
+          </div>
+          <div class="lineIndex">
+            <a href="getting.html">Getting code</a>
+            <p>Getting the code by anonymous FTP , etc.</p>
+          </div>
+        </div>
+      </div>
     </div>
-    <div id="line3">
-
-            <div class="lineIndex"><a href="history.html">History</a>
-            <p>A summary of the history of the project.</p></div>
-        <div class="lineIndex"><a href="how can I help.html">How can I help?</a>
-            <p>If you would like to support the web..</p></div>
-        <div class="lineIndex"><a href="getting.html">Getting code</a>
-            <p>Getting the code by anonymous FTP , etc.</p></div>
+  </main>
+  <footer>
+    <div id="credits1">
+      <p>Original site, the first website:</p>
+      <p><a href=""></a>The World Wide Web Project</p>
     </div>
-    </main>
-    <footer>
-    <div id="credits1"><p>Original site, the first website:</p>
-    <p><a href=""></a>The World Wide Web Project</p></div>
     <div id="credits2">
-    <p>Original Author: Tim Berners-Lee</p>
-    <p>A redesign by:Row-Tech</p>
+      <p>Original Author: Tim Berners-Lee</p>
+      <p>A redesign by:Row-Tech</p>
     </div>
-    </footer>
+  </footer>
+  <script src="chrome-extension://mooikfkahbdckldjjndioackbalphokd/assets/prompt.js"></script>
+  <script src="index.js"></script>
+  <script src="mobile-navbar.js"></script>
 </body>
 </html>

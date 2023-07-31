@@ -1,56 +1,224 @@
-/* fonte usada */
-@import url('https://fonts.googleapis.com/css?family=Tektur');
-*{
-    margin: 0;
-    padding: 0;
-    font-family: 'Tektur',sans-serif;
+/* Fonte usada */
+@import url("https://fonts.googleapis.com/css?family=Tektur");
+
+/* Definições globais */
+:root {
+  --cbc-color: #000000;
+  --bg-color: #252525;
+  --bg2-color: #101010;
+  --txt-color: #aaaaaa;
+  --highlighted-color: #cccccc;
+  --title-color: #ffffff;
+  --line-height: 10vw;
 }
 
-section {
-    display: flex;
-    justify-content: center;
+/* Estilo padrão para todos os elementos */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Tektur", sans-serif;
+  box-sizing: border-box;
+}
+
+/* Estilo do corpo da página */
+body {
+  background-color: var(--bg-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centraliza o conteúdo verticalmente */
+  min-height: 100vh; /* Define uma altura mínima de 100% da viewport height */
+}
+
+/* Estilo do cabeçalho */
+header {
+  text-align: center;
+  background-color: var(--cbc-color);
+  padding: 16px;
+  width: 100%; /* Ocupa toda a largura disponível */
+  border-radius: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra sutil */
+}
+
+nav {
+  display: flex;
+  justify-content: space-between; /* Adicionado para alinhar o logo à esquerda e o botão à direita */
+  align-items: center;
+  font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+  background: #02020c;
+  height: 8vh;
+  padding: 0 16px; /* Adicionado espaçamento para o botão ficar afastado da borda */
+}
+
+#theme-toggle {
+  background: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+.logo {
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+  background: #23232e;
+  height: 8vh;
+}
+
+main {
+  background: url("img/bg.jpg") no-repeat center center fixed;
+  background-size: cover;
+  height: 92vh;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+}
+
+.nav-list li {
+  letter-spacing: 3px;
+  margin-left: 32px;
+}
+
+.mobile-menu {
+  display: none;
+  cursor: pointer;
+}
+
+.mobile-menu div {
+  width: 32px;
+  height: 2px;
+  background: #fff;
+  margin: 8px;
+  transition: 0.3s;
+}
+
+@media (max-width: 999px) {
+  body {
+    overflow-x: hidden;
+  }
+  .nav-list {
+    position: absolute;
+    top: 8vh;
+    right: 0;
+    width: 50vw;
+    height: 92vh;
+    background: #23232e;
+    flex-direction: column;
     align-items: center;
-    min-height: 100vh;
-    width: 100%;
-
-    background: url(img/escada.jpg)no-repeat;
-    background-position:center;
-    background-size:cover;
+    justify-content: space-around;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in;
+  }
+  .nav-list li {
+    margin-left: 0;
+    opacity: 0;
+  }
+  .mobile-menu {
+    display: block;
+  }
 }
-/* caixa do menu de login */
-.form-box {
-    position: relative;
-    width: 240px;
-    height: 290px;
-    background: transparent;
-    border: 2px solid rgba(255, 255, 255, 0.5);
-    border-radius: 20px;
-    backdrop-filter: blur(15px);
+
+.nav-list.active {
+  transform: translateX(0);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.mobile-menu.active .line1 {
+  transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2 {
+  opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+  transform: rotate(45deg) translate(-5px, -7px);
+}
+/* Estilo das linhas */
+.lineIndex {
+  height: var(--line-height);
+  border-radius: 8px;
+  text-align: center;
+  background-color: var(--bg2-color);
+  margin: 8px;
+  flex: 1; /* Ocupa o espaço disponível horizontalmente */
+}
+
+/* Estilos para tamanhos de tela menores que 768px */
+@media screen and (max-width: 768px) {
+  /* Reduza o tamanho da linha e do cabeçalho */
+  .lineIndex {
+    height: 8vw;
+  }
+
+  header {
+    padding: 8px;
+  }
+
+  footer {
+    padding: 8px;
+  }
+}
+
+/* Estilo dos títulos */
+h1 {
+  color: var(--title-color);
+  flex: 13;
+}
+
+/* Estilo dos botões */
+button {
+  flex: 1;
+}
+
+/* Estilo dos parágrafos */
+p {
+  color: var(--txt-color);
+}
+
+/* Estilo dos links */
+a {
+  color: var(--highlighted-color);
+}
+
+/* Estilo do rodapé */
+footer {
+    position: fixed; /* Fixa o rodapé na parte inferior da viewport */
+    bottom: 0; /* Alinha o rodapé à parte inferior */
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-}
-
-h2{
-    font-size: 2em;
-    color: antiquewhite;
-    text-align: center;
-}
-
-h3{
-    font-size: 1em;
-    color: rgb(255, 255, 255);
-    text-align: center;
-}
-
-button{
+    background-color: var(--cbc-color);
+    padding: 16px;
     width: 100%;
-    height: 40px;
-    border-radius: 40px;
-    background: #fff;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    font-size: 1em;
-    font-weight: 600;
-}
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+  }
