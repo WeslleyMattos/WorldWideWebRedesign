@@ -11,27 +11,29 @@
 <body>
   <header>
     <nav>
-      <a class="logo" href="/">World Wide Web</a>
+      <a id="logo" class="nav" href="/">World Wide Web</a>
       <div class="mobile-menu">
         <div class="line1"></div>
         <div class="line2"></div>
         <div class="line3"></div>
       </div>
       <ul class="nav-list">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">The History</a></li>
-        <li><a href="#">Help</a></li>
+        <li><a class="nav" href="#">Home</a></li>
+        <li><a class="nav" href="#">About Us</a></li>
+        <li><a class="nav" href="#">The History</a></li>
+        <li><a class="nav" href="#">Help</a></li>
       </ul>
       <button id="theme-toggle">Change Theme</button>
     </nav>
   </header>
+  <br>
   <main>
     <div class="wrapper">
-      <header>
-        <div id="topHeader">
+      
+        <div id="firstContent">
           <h1>World Wide Web</h1>
-        </div>
+        
+        
         <p>
           The WorldWideWeb (W3) is a wide-area
           <a name="0" href="hypertext.html"> hypermedia</a> information
@@ -47,11 +49,12 @@
           <a name="34" href="w3news.html">W3 news</a> ,
           <a href="frequentlyasked.html">Frequently Asked Questions.</a>
         </p>
-      </header>
+      </div>
+      <br>
 
       <div id="bigConteiner">
-
-        <div id="line1">
+        
+        
           <div class="lineIndex">
             <a href="whatsoutthere.html">What's out there?</a>
             <p>
@@ -71,12 +74,14 @@
               Library.)
             </p>
           </div>
-        </div>
+        
 
-        <div id="line2">
+       
           <div class="lineIndex">
+            <span></span>
             <a href="technical.html">Technical</a>
             <p>Details of protocols, formats, program internals etc</p>
+            <span></span>
           </div>
           <div class="lineIndex">
             <a href="bibliography.html">Bibliography</a>
@@ -86,8 +91,7 @@
             <a href="people.html">People</a>
             <p>A list of some people involved in the project.</p>
           </div>
-        </div>
-        <div id="line3">
+        
           <div class="lineIndex">
             <a href="history.html">History</a>
             <p>A summary of the history of the project.</p>
@@ -100,7 +104,7 @@
             <a href="getting.html">Getting code</a>
             <p>Getting the code by anonymous FTP , etc.</p>
           </div>
-        </div>
+        
       </div>
     </div>
   </main>
