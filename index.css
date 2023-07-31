@@ -39,6 +39,7 @@ header {
   border-radius: 15px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra sutil */
   position: fixed;
+  z-index:1;
 }
 
 #firstContent{
@@ -55,6 +56,7 @@ nav {
   background: #02020c;
   height: 8vh;
   padding: 0 16px; /* Adicionado espaçamento para o botão ficar afastado da borda */
+ 
 }
 
 
@@ -201,6 +203,14 @@ nav {
    /* Ocupa o espaço disponível horizontalmente */
 }
 
+.insideIndex{
+  width: 80%;
+  position: relative;
+  top: 50%;
+  left: 10%;
+  transform: translate(0, -50%);
+}
+
 .lineIndex:hover{
   border: 4px solid white;
 }
@@ -250,7 +260,7 @@ a {
 
 /* Estilo do rodapé */
 footer {
-    position: fixed; /* Fixa o rodapé na parte inferior da viewport */
+    position: static;
     bottom: 0; /* Alinha o rodapé à parte inferior */
     display: flex;
     justify-content: space-between;
