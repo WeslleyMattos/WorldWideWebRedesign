@@ -16,7 +16,7 @@ function toggleTheme() {
     // Aqui você pode definir as cores para o tema claro
     root.style.setProperty("--cbc-color", "#ffffff");
     root.style.setProperty("--bg-color", "#f0f0f0");
-    root.style.setProperty("--bg2-color", "#e0e0e0");
+    root.style.setProperty("--bg2-color", "#cccccc");
     root.style.setProperty("--txt-color", "#333333");
     root.style.setProperty("--highlighted-color", "#111111");
     root.style.setProperty("--title-color", "#000000");

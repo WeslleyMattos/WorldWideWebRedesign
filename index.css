@@ -24,6 +24,7 @@
 /* Estilo do corpo da página */
 body {
   background-color: var(--bg-color);
+  background: radial-gradient(circle, var(--bg-color) 0%, rgba(0, 152, 144, 0.818) 100%);
   display: flex;
   flex-direction: column;
   align-items: center; /* Centraliza o conteúdo verticalmente */
@@ -34,9 +35,9 @@ body {
 header {
   text-align: center;
   background-color: var(--cbc-color);
-  padding: 16px;
-  width: 100%; /* Ocupa toda a largura disponível */
   border-radius: 15px;
+  padding: 4px;
+  width: 100%; /* Ocupa toda a largura disponível */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra sutil */
   position: fixed;
   z-index:1;
@@ -53,10 +54,10 @@ nav {
   justify-content: space-between; /* Adicionado para alinhar o logo à esquerda e o botão à direita */
   align-items: center;
   font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
-  background: #02020c;
+  background: #000000;
   height: 8vh;
   padding: 0 16px; /* Adicionado espaçamento para o botão ficar afastado da borda */
- 
+
 }
 
 
@@ -91,12 +92,13 @@ a:hover {
   letter-spacing: 4px;
 }
 
+/* barra menu  */
 nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
   font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
-  background: #23232e;
+  background: #1b1b1b;
   height: 8vh;
 }
 
@@ -106,7 +108,7 @@ nav {
 }
 
 /*main {
-  background: url("img/bg.jpg") no-repeat center center fixed;
+  background: url("img/bg.jpg") no-repeat center center;
   background-size: cover;
   height: 92vh;
 }*/
@@ -129,13 +131,13 @@ nav {
 .mobile-menu div {
   width: 32px;
   height: 2px;
-  background: #fff;
+  background: #bb2424;
   margin: 8px;
   transition: 0.3s;
 }
 
 .nav{
-  color: #fff;
+  color: #ffffff;
 }
 
 @media (max-width: 999px) {
@@ -266,7 +268,7 @@ footer {
     justify-content: space-between;
     align-items: center;
     background-color: var(--cbc-color);
-    padding: 16px;
+    padding: 8px;
     width: 100%;
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
   }
