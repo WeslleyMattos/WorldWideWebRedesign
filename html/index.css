@@ -7,7 +7,7 @@
   --bg-color: #252525;
   --bg2-color: #101010;
   --txt-color: #aaaaaa;
-  --highlighted-color: #cccccc;
+  --highlighted-color: #aa3131;
   --title-color: #ffffff;
   --line-height: 10vw;
   --nav-color: #ffffff;
@@ -263,7 +263,7 @@ a {
 /* Estilo do rodapé */
 footer {
     position: static;
-    bottom: 0; /* Alinha o rodapé à parte inferior */
+    bottom: 0%; /* Alinha o rodapé à parte inferior */
     display: flex;
     justify-content: space-between;
     align-items: center;

@@ -9,7 +9,7 @@ function toggleTheme() {
     root.style.setProperty("--bg-color", "#252525");
     root.style.setProperty("--bg2-color", "#101010");
     root.style.setProperty("--txt-color", "#aaaaaa");
-    root.style.setProperty("--highlighted-color", "#cccccc");
+    root.style.setProperty("--highlighted-color", "#aa3131");
     root.style.setProperty("--title-color", "#ffffff");
     root.style.setProperty("--nav-color", "#ffffff");
   } else {
@@ -18,7 +18,7 @@ function toggleTheme() {
     root.style.setProperty("--bg-color", "#f0f0f0");
     root.style.setProperty("--bg2-color", "#cccccc");
     root.style.setProperty("--txt-color", "#333333");
-    root.style.setProperty("--highlighted-color", "#111111");
+    root.style.setProperty("--highlighted-color", "#cc3131");
     root.style.setProperty("--title-color", "#000000");
     root.style.setProperty("--nav-color", "#000000");
   }
