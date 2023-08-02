@@ -107,12 +107,6 @@ nav {
   grid-template-columns: 1fr 1fr 1fr;
 }
 
-/*main {
-  background: url("img/bg.jpg") no-repeat center center;
-  background-size: cover;
-  height: 92vh;
-}*/
-
 .nav-list {
   list-style: none;
   display: flex;
@@ -271,4 +265,4 @@ footer {
     padding: 8px;
     width: 100%;
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
-  }
+}

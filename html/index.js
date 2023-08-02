@@ -1,7 +1,8 @@
 const themeToggleBtn = document.getElementById("theme-toggle");
 const root = document.documentElement;
 
-let isDarkMode = false;
+let isDarkMode = localStorage.getItem('theme') === 'dark-theme';
+toggleTheme()
 
 function toggleTheme() {
   if (isDarkMode) {
@@ -22,8 +23,8 @@ function toggleTheme() {
     root.style.setProperty("--title-color", "#000000");
     root.style.setProperty("--nav-color", "#000000");
   }
-
   isDarkMode = !isDarkMode;
+  localStorage.setItem('theme', !isDarkMode ? 'dark-theme' : 'light-theme');
 }
 
 themeToggleBtn.addEventListener("click", toggleTheme);
